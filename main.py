@@ -31,7 +31,7 @@ class MyForm(QWidget):
         elif self.ui.radio_odbior.isChecked():
             dostawa = "Odbiór osobisty"
 
-        self.ui.wynik_label.setText(f'Rozmiar twojej koszulki to: {rozmiar} i sposób dostawy: ')
+        self.ui.wynik_label.setText(f'Rozmiar twojej koszulki to: {rozmiar} i sposób dostawy: {dostawa}')
 
 
 if __name__ == '__main__':
