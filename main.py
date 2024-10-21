@@ -8,15 +8,23 @@ class MyForm(QWidget):
         super().__init__()
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.ui.radio_s.toggled.connect(self.button_click)
+        self.ui.radio_m.toggled.connect(self.button_click)
+        self.ui.radio_l.toggled.connect(self.button_click)
+        self.ui.radio_xl.toggled.connect(self.button_click)
+        self.ui.radio_paczkomat.toggled.connect(self.button_click)
+        self.ui.radio_kurier.toggled.connect(self.button_click)
+        self.ui.radio_odbior.toggled.connect(self.button_click)
+
 
         self.show()
 
-    def rozmiar_click(self):
+    def button_click(self):
         rozmiar = ""
         dostawa = ""
 
         if self.ui.radio_s.isChecked():
-            rozmiarc = "S"
+            rozmiar = "S"
         elif self.ui.radio_m.isChecked():
             rozmiar = "M"
         elif self.ui.radio_l.isChecked():
